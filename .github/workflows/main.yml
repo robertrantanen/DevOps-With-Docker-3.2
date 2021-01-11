@@ -15,8 +15,7 @@ jobs:
       - name: deploy
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_TOKEN }}
-          HEROKU_APP_NAME: "ancient-tundra-90402"
         run: |
           heroku container:login
-          heroku container:push web -a $(appname)
-          heroku container:release web -a $(appname)
+          heroku container:push web -a ancient-tundra-90402
+          heroku container:release web -a ancient-tundra-90402
